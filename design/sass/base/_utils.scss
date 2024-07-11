@@ -1,0 +1,7 @@
+// For open close animation
+.hidden {
+  height: 0;
+  visibility: hidden;
+  margin: 0 !important;
+  transition: all 0.3s;
+}

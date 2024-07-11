@@ -1,0 +1,32 @@
+.heading--secondary {
+  font-size: 5.2rem;
+  margin-bottom: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 4rem;
+  }
+
+  .icon__heading {
+    width: 3.6rem;
+    height: auto;
+
+    @media only screen and (max-width: 700px) {
+      width: 3rem;
+    }
+  }
+}
+
+.heading--tertiary {
+  justify-self: start;
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $color--grayish_purple;
+  }
+}

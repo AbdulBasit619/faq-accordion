@@ -1,0 +1,30 @@
+.accordion {
+  padding: 2rem 0;
+
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+
+  @media only screen and (max-width: 700px) {
+    column-gap: 2.4rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($color--dark_purple, 0.1);
+  }
+
+  .icon {
+    cursor: pointer;
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    color: $color--grayish_purple;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: height 0.3s, margin 0.3s;
+  }
+}
