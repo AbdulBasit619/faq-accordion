@@ -4,7 +4,13 @@
   "description": "Practice project using HTML and SCSS(CSS)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass": "node-sass design/sass/main.scss design/css/style.css -w",
+    "dev-server": "live-server",
+    "start": "npm-run-all --parallel dev-server watch:sass",
+    "compile:sass": "node-sass design/sass/main.scss design/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' design/css/style.comp.css -o design/css/style.prefix.css",
+    "compress:css": "node-sass design/css/style.prefix.css design/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass  prefix:css compress:css"
   },
   "author": "Abdul Basit",
   "license": "ISC",
