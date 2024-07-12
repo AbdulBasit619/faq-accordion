@@ -23,4 +23,4 @@
 style-guide.md
 /design/*.jpg
 /assets/fonts
-package.json
+*.json
